@@ -1,0 +1,120 @@
+.time-promotion {
+  display: flex;
+  flex-direction: row;
+}
+.time-promotion_header {
+  color: #377dff;
+  font-family: Inter;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 16px;
+}
+.time-promotion_content {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  background-color: rgba(255, 171, 0, 0.4);
+  padding: 72px 160px 72px 72px;
+}
+.time-promotion_offer {
+  font-family: Poppins;
+  font-size: 40px;
+  font-weight: 500;
+  line-height: 44px;
+  letter-spacing: -0.4px;
+}
+.time-promotion_text {
+  font-family: Inter;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 32px;
+}
+.time-promotion_timer-block {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  font-family: Inter;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 26px;
+}
+.time-promotion_timer {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-column-gap: 5%;
+  width: 75%;
+}
+.time-promotion_card {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+.time-promotion_number {
+  background-color: white;
+  font-family: Poppins;
+  font-size: 34px;
+  font-weight: 500;
+  line-height: 38px;
+  letter-spacing: -0.6px;
+  padding: 20% 0% 20% 0%;
+}
+.time-promotion_button {
+  background-color: black;
+  color: white;
+  font-family: Inter;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 28px;
+  letter-spacing: -0.4px;
+  text-align: center;
+  padding: 6px 40px 6px 40px;
+  border-radius: 8px;
+  width: 20%;
+}
+
+@media screen and (max-width: 480px) {
+  .time-promotion {
+    flex-direction: column-reverse;
+  }
+  .time-promotion_content {
+    padding: 5%;
+  }
+  .time-promotion_offer {
+    font-family: Poppins;
+    font-size: 34px;
+    font-weight: 500;
+    line-height: 38px;
+    letter-spacing: -0.6px;
+  }
+  .time-promotion_text {
+    font-family: Inter;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 22px;
+  }
+  .time-promotion_timer-block {
+    font-family: Inter;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 26px;
+  }
+  .time-promotion_timer {
+    grid-template-columns: repeat(4, 60px);
+    font-family: Poppins;
+    font-size: 34px;
+    font-weight: 500;
+    line-height: 38px;
+    letter-spacing: -0.6px;
+    text-align: center;
+  }
+  .time-promotion_card-text {
+    font-family: Inter;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 20px;
+  }
+  .time-promotion_button {
+    width: 35%;
+    padding: 2%;
+  }
+}

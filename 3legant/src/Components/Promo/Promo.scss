@@ -1,0 +1,73 @@
+$offer-background: #141718;
+$blue-accent: #377dff;
+.promo {
+  position: relative;
+  background-image: url("../../img/home_page2.svg");
+  background-size: cover;
+  height: 820px;
+}
+.promo_content {
+  position: absolute;
+  width: 538px;
+  top: 30%;
+  left: 60%;
+}
+.promo_main-text {
+  font-family: Poppins;
+  font-size: 80px;
+  font-weight: 500;
+  line-height: 84px;
+  letter-spacing: -3px;
+}
+.promo_main-text__accent {
+  color: $blue-accent;
+}
+.promo_sub-text {
+  font-family: Inter;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 32px;
+}
+.promo_button {
+  background-color: $offer-background;
+  color: white;
+  border-radius: 8px;
+  width: 50%;
+  margin-top: 3%;
+  margin-left: 25%;
+  padding-top: 3%;
+  padding-bottom: 3%;
+  text-align: center;
+  font-family: Inter;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 32px;
+  letter-spacing: -0.4px;
+  transition: background-color, 0.2s;
+  &:hover {
+    background-color: rgba(20, 23, 24, 0.75);
+  }
+  &:active {
+    background-color: rgba(20, 23, 24, 0);
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .promo {
+    width: 100%;
+    background-image: url("../../img/home_page2_mobile.svg");
+  }
+  .promo_content {
+    top: 5%;
+    left: 0%;
+    width: fit-content;
+    height: 500px;
+    text-align: center;
+  }
+  .promo_main-text {
+    font-size: 40px;
+    font-weight: 500;
+    line-height: 44px;
+    letter-spacing: -0.4px;
+  }
+}

@@ -1,5 +1,5 @@
 .newsfeed {
-  padding: 40px 160px 40px 160px;
+  padding: 11.2% 11.2% 11.2% 11.2%;
 }
 .newsfeed_text {
   display: flex;
@@ -38,7 +38,9 @@
   display: flex;
   flex-direction: row;
   gap: 16px;
-  margin-top: 40px;
+  margin: 5.44% 0 2.62% 0;
+  padding-bottom: 2.62%;
+  overflow-x: scroll;
 }
 
 @media screen and (max-width: 480px) {

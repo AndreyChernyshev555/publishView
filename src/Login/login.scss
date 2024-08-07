@@ -75,10 +75,14 @@
 }
 .enter-block_form-field {
   border: 0;
-  border-bottom: 1px solid #e8ecef;
+  border-bottom: 2px solid #e8ecef;
   height: 40px;
+  transition: border-bottom 0.5s;
+  &:focus{
+    outline: none;
+    border-bottom: 2px solid black;
+  }
 }
-
 .enter-block_agreement {
   display: flex;
   flex-direction: row;

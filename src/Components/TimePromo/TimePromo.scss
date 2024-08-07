@@ -7,7 +7,7 @@
     background-image: url("../../img/hurry.svg");
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: center;
+    background-position: right;
 }
 .time-promotion_header {
     color: #377dff;
@@ -85,7 +85,11 @@
 
 @media screen and (max-width: 480px) {
     .time-promotion {
+        display: flex;
         flex-direction: column-reverse;
+    }
+    .time-promotion_img {
+        height: 348px;
     }
     .time-promotion_content {
         padding: 5%;
@@ -117,12 +121,6 @@
         line-height: 38px;
         letter-spacing: -0.6px;
         text-align: center;
-    }
-    .time-promotion_card-text {
-        font-family: Inter;
-        font-size: 12px;
-        font-weight: 400;
-        line-height: 20px;
     }
     .time-promotion_button {
         width: 35%;

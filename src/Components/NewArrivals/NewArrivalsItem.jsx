@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from "react";
+import { useDispatch } from "react-redux";
 import starIcon from "../../img/star.svg";
+import * as actions from "../../Store/actions";
 
 export default function NewArrivalsItem(props) {
     const rating = props.rating;
@@ -44,6 +46,9 @@ export default function NewArrivalsItem(props) {
         };
     }, []);
 
+    const dispatch = useDispatch();
+    const cartInfo = {title: props.title, price: props.price};
+    
     return (
         <div className="new-arrivals_goods-item">
             <div
@@ -69,7 +74,11 @@ export default function NewArrivalsItem(props) {
                 </div>
                 <div
                     className="new-arrivals_add-button"
-                    onClick={props.addFunc}
+                    onClick={
+                        () => {
+                            dispatch(actions.addGoods(cartInfo));
+                        }
+                    }
                     style={{ opacity: buttonShow ? 1 : 0 }}
                 >
                     Add to cart
@@ -77,7 +86,7 @@ export default function NewArrivalsItem(props) {
             </div>
             <div className="new-arrivals_description">
                 <span className="new-arrivals_rating">{rateBlock}</span>
-                <span className="new-arrivals_name">{props.goods}</span>
+                <span className="new-arrivals_title">{props.title}</span>
                 <div className="new-arrivals_price">
                     <span className="new-arrivals_price-act">
                         {props.price}

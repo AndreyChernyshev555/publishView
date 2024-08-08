@@ -34,7 +34,6 @@ export default function Head(props) {
             <div className="head_buttons-block">
                 <img
                     className="head_button"
-                    onClick={() => navigate("/home2")}
                     src={searchIcon}
                 />
                 <img className="head_button" src={userIcon} />

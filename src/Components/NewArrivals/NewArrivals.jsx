@@ -20,7 +20,7 @@ export default function NewArrivals(props) {
         <NewArrivalsItem
             path={item.path}
             rating={item.rating}
-            goods={item.goods}
+            title={item.title}
             price={item.price}
             discount={item.discount}
             addFunc={props.addFunc}

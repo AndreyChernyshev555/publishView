@@ -20,7 +20,7 @@ export default function Collection(props) {
     return () => {
       window.removeEventListener("resize", resize);
     };
-  }, []);
+  }, [heightProportionMain]);
 
   return (
     <div className="collection"
@@ -41,7 +41,7 @@ export default function Collection(props) {
             left: `${props.goods[0].left}`,
           }}
         >
-          <div>{props.goods[0].label}</div>
+          <div>{props.goods[0].title}</div>
           <div className="collection_link">{props.collOffer}</div>
         </div>
       </div>
@@ -53,7 +53,7 @@ export default function Collection(props) {
         }}
       >
         <div className="collection_sub-text">
-          <div>{props.goods[1].label}</div>
+          <div>{props.goods[1].title}</div>
           <div className="collection_link">{props.collOffer}</div>
         </div>
       </div>
@@ -65,7 +65,7 @@ export default function Collection(props) {
         }}
       >
         <div className="collection_sub-text">
-          <div>{props.goods[2].label}</div>
+          <div>{props.goods[2].title}</div>
           <div className="collection_link">{props.collOffer}</div>
         </div>
       </div>

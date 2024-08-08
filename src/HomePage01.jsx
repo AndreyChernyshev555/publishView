@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import {useSelector} from 'react-redux';
 import "./HomePage01.scss";
 import FlyMenu from "./Components/FlyMenu/FlyMenu.jsx";
 import ShadowBlock from "./Components/ShadowBlock.jsx";
@@ -66,7 +65,6 @@ const goodsInfo = [
 const collOffering = "Shop Now";
 
 export default function HomePage01(props) {
-    const cartItems = props.cartItems;
     const [flyMenu, setFlyMenu] = useState(-1.2);
     const showFlyMenu = () => {
         setFlyMenu(0);
@@ -83,7 +81,6 @@ export default function HomePage01(props) {
             <ShadowBlock displayParam={flyMenu}/>
             <Offer offerText={"30% off storewide — Limited time!"} />
             <Head
-                amount={cartItems.length}
                 headStyle={{
                     backgroundColor: "white",
                     color: "#6c7275",

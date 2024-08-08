@@ -105,8 +105,6 @@ const collOffering = "Collection →";
 //   }
 
 export default function HomePage02(props) {
-    const cartItems = props.cartItems;
-    
     const [flyMenu, setFlyMenu] = useState(-1.2);
     const showFlyMenu = () => {
         setFlyMenu(0);
@@ -133,7 +131,6 @@ export default function HomePage02(props) {
                 offerLink={{ color: "rgba(255, 171, 0, 0.64" }}
             />
             <Head
-                amount={cartItems.length}
                 homePageFunc={props.setFunc}
                 headStyle={{
                     backgroundColor: "#FFC95C",

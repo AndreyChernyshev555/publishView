@@ -47,7 +47,11 @@ export default function NewArrivalsItem(props) {
     }, []);
 
     const dispatch = useDispatch();
-    const cartInfo = {title: props.title, price: props.price};
+    const cartInfo = {
+        title: props.title,
+        price: props.price,
+        path: props.path
+    };
     
     return (
         <div className="new-arrivals_goods-item">

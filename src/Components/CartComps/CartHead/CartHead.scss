@@ -1,0 +1,34 @@
+$base-color: #B1B5C3;
+$num-color: white;
+$focus-color: #black;
+
+.cart-head {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr;
+    grid-gap: 5%;
+    padding: 5% 10% 5% 10%;
+}
+.cart-head_item {
+    display: flex;
+    flex-direction: row;
+    gap: 5%;
+    font-family: Inter;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 26px;
+    padding-bottom: 5%;
+}
+.cart-head_num {
+    width: 2em;
+    height: 2em;
+    border-radius: 50%;
+    background-color: $base-color;
+    color: $num-color;
+    text-align: center;
+    align-content: center;
+}
+.cart-head_text {
+    align-content: center;
+    color: $base-color;
+}

@@ -1,0 +1,22 @@
+.cart-goods {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    font-family: Inter;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 26px;
+}
+.cart-goods_item {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.cart-goods_item-text {
+    display: flex;
+    flex-direction: column;
+}
+.cart-goods_item-quantity {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}

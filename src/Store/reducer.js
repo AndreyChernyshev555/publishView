@@ -4,10 +4,10 @@ export default function reducer(state=[], action) {
     switch (action.type) {
         case actions.GOODS_ADD:
             if (state.filter(item => action.info.title == item.title).length == 0) {
-                console.log(action.info);
                 return [...state, {
                     title: action.info.title,
-                    price: action.info.price
+                    price: action.info.price,
+                    path: action.info.path
                 }];
             }
             else return state;

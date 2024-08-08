@@ -1,5 +1,6 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
+import { useSelector } from "react-redux";
 import HeadIndicator from "./HeadIndicator.jsx";
 import "./Head.scss";
 import searchIcon from "../../img/icons/search.svg";
@@ -9,6 +10,7 @@ import menuIcon from "../../img/icons/menu.svg";
 
 export default function Head(props) {
     const navigate = useNavigate();
+    const cartItems = useSelector(state => state);
     return (
         <div className="head" style={props.headStyle}>
             <div className="head_logo">
@@ -38,8 +40,12 @@ export default function Head(props) {
                 />
                 <img className="head_button" src={userIcon} />
                 <div className="head_cart">
-                    <img className="head_button" src={cartIcon} />
-                    <HeadIndicator amount={props.amount} />
+                    <img
+                        className="head_button"
+                        src={cartIcon}
+                        onClick={() => navigate("/cart")}
+                    />
+                    <HeadIndicator amount={cartItems.length} />
                 </div>
             </div>
         </div>

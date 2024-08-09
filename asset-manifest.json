@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/publishView/static/css/main.35901a14.css",
-    "main.js": "/publishView/static/js/main.1c2b976f.js",
+    "main.css": "/publishView/static/css/main.c7928f8a.css",
+    "main.js": "/publishView/static/js/main.d3826154.js",
     "static/media/living_room.svg": "/publishView/static/media/living_room.4ed9e78adcfab73d890c3f48002a44ab.svg",
     "static/media/hurry.svg": "/publishView/static/media/hurry.a4a18f0f07e711f45cd6e29922ebf81e.svg",
     "static/media/item0.svg": "/publishView/static/media/item0.128d7423b634eb53ba9ca59d2882f9ac.svg",
@@ -57,11 +57,11 @@
     "static/media/facebook.svg": "/publishView/static/media/facebook.bba72c0f7ef407514eed80a8f0240b98.svg",
     "static/media/show.svg": "/publishView/static/media/show.957a66d574c6c63dd206cf1f573517d3.svg",
     "static/media/menu.svg": "/publishView/static/media/menu.c80dca1b3efd3547936b123424a8ba27.svg",
-    "main.35901a14.css.map": "/publishView/static/css/main.35901a14.css.map",
-    "main.1c2b976f.js.map": "/publishView/static/js/main.1c2b976f.js.map"
+    "main.c7928f8a.css.map": "/publishView/static/css/main.c7928f8a.css.map",
+    "main.d3826154.js.map": "/publishView/static/js/main.d3826154.js.map"
   },
   "entrypoints": [
-    "static/css/main.35901a14.css",
-    "static/js/main.1c2b976f.js"
+    "static/css/main.c7928f8a.css",
+    "static/js/main.d3826154.js"
   ]
 }

@@ -15,7 +15,6 @@ export default function NewArrivals(props) {
                   paddingBottom: "96px",
               }
             : { flexWrap: `${props.wrap}`, overflowX: `${props.overflow}` };
-
     const items = props.itemList.map((item) => (
         <NewArrivalsItem
             path={item.path}

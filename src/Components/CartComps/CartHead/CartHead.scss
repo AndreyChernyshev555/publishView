@@ -7,7 +7,7 @@ $focus-color: #black;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: 1fr;
     grid-gap: 5%;
-    padding: 5% 10% 5% 10%;
+    padding: 0% 20% 5% 20%;
 }
 .cart-head_item {
     display: flex;
@@ -31,4 +31,14 @@ $focus-color: #black;
 .cart-head_text {
     align-content: center;
     color: $base-color;
+}
+
+@media screen and (max-width: 480px) {
+    .cart-head {
+        padding: 0;
+        overflow-x: scroll;
+    }
+    .cart-head_item {
+        width: 65vw;
+    }
 }

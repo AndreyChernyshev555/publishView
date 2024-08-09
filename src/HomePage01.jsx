@@ -36,7 +36,7 @@ const itemInfo = [
     {
         path: furniture[2],
         rating: 5,
-        title: "Loveseat Sofa",
+        title: "Beige Table Lamp",
         price: "$24.00",
         discount: "-50%",
     },
@@ -100,8 +100,8 @@ export default function HomePage01(props) {
                 <Info2 />
                 <Articles />
                 <Newsletter background={newsletterBack} />
-                <Footer />
             </div>
+            <Footer />
         </div>
     );
 }

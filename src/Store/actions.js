@@ -5,7 +5,12 @@ export const addGoods = (goods) => ({
     info: goods
 });
 
-export const removeGoods = (id) => ({
+export const removeGoods = (goods) => ({
     type: actions.GOODS_REMOVE,
-    info: {id}
+    info: goods
+});
+
+export const decrementGoods = (goods) => ({
+   type: actions.GOODS_DECREMENT,
+   info: goods
 });

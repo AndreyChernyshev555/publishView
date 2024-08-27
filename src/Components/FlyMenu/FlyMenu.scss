@@ -1,53 +1,53 @@
 .fly-menu {
-    display: none;
+  display: none;
 }
 
 @media screen and (max-width: 480px) {
-    .fly-menu {
-        display: flex;
-        flex-direction: column;
-        gap: 2.5%;
-        padding: 5%;
-        position: absolute;
-        top: 0;
-        z-index: 50;
-        background-color: white;
-        transition: transform 1s cubic-bezier(0.37, 0, 0.63, 1);
+  .fly-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5%;
+    padding: 5%;
+    position: absolute;
+    top: 0;
+    z-index: 50;
+    background-color: white;
+    transition: transform 1s cubic-bezier(0.37, 0, 0.63, 1);
+  }
+  .fly-menu_head {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-family: Poppins;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+  }
+  .fly-menu_search {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-gap: 2%;
+    padding: 5%;
+    border-radius: 10px;
+    border: 1px solid rgba(120, 120, 120, 0.5);
+  }
+  .fly-menu_search-input {
+    border: 0;
+    padding-right: 2.5%;
+    &:focus {
+      outline: 0;
     }
-    .fly-menu_head {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        font-family: Poppins;
-        font-size: 16px;
-        font-weight: 500;
-        line-height: 24px;
-    }
-    .fly-menu_search {
-        display: grid;
-        grid-template-columns: auto 1fr;
-        grid-gap: 2%;
-        padding: 5%;
-        border-radius: 10px;
-        border: 1px solid rgba(120, 120, 120, 0.5);
-    }
-    .fly-menu_search-input {
-        border: 0;
-        padding-right: 2.5%;
-        &:focus {
-            outline: 0;
-        }
-    }
-    .fly-menu_item {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-        font-family: Inter;
-        font-size: 14px;
-        font-weight: 500;
-        line-height: 24px;
-        height: 32px;
-        border-bottom: 1px solid #E8ECEF;
-    }
+  }
+  .fly-menu_item {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    font-family: Inter;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 24px;
+    height: 32px;
+    border-bottom: 1px solid #e8ecef;
+  }
 }

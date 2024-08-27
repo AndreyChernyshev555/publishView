@@ -78,7 +78,7 @@
   border-bottom: 2px solid #e8ecef;
   height: 40px;
   transition: border-bottom 0.5s;
-  &:focus{
+  &:focus {
     outline: none;
     border-bottom: 2px solid black;
   }
@@ -128,7 +128,7 @@
   background-color: #7d542e;
 }
 
-@media screen and (max-width: 640px)  {
+@media screen and (max-width: 640px) {
   .enter-page {
     flex-direction: column;
     width: 100%;

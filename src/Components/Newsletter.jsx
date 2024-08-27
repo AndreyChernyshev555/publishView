@@ -7,10 +7,7 @@ export default function Newsletter(props) {
     ? "none"
     : `url(${props.background})`;
   return (
-    <div
-      className="newsletter"
-      style={{ backgroundImage: backgroundImg }}
-    >
+    <div className="newsletter" style={{ backgroundImage: backgroundImg }}>
       <div className="newsletter_block">
         <div className="newsletter_text">
           <div className="newsletter_header">Join Our Nesletter</div>

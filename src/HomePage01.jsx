@@ -18,90 +18,86 @@ import newsletterBack from "./img/newsletter.png";
 import furniture from "./img/furniture/furniture.js";
 
 const itemInfo = [
-    {
-        path: furniture[0],
-        rating: 5,
-        title: "Loveseat Sofa",
-        price: "$199.00",
-        oldPrice: "$400.00",
-        discount: "-50%",
-    },
-    {
-        path: furniture[1],
-        rating: 5,
-        title: "Table Lamp",
-        price: "$24.99",
-        discount: "-50%",
-    },
-    {
-        path: furniture[2],
-        rating: 5,
-        title: "Beige Table Lamp",
-        price: "$24.00",
-        discount: "-50%",
-    },
-    {
-        path: furniture[3],
-        rating: 5,
-        title: "Bamboo Basket",
-        price: "$10.50",
-        discount: "-50%",
-    },
-    {
-        path: furniture[4],
-        rating: 5,
-        title: "Toaster",
-        price: "$249.25",
-        oldPrice: "$400.00",
-        discount: "-50%",
-    },
+  {
+    path: furniture[0],
+    rating: 5,
+    title: "Loveseat Sofa",
+    price: "$199.00",
+    oldPrice: "$400.00",
+    discount: "-50%",
+  },
+  {
+    path: furniture[1],
+    rating: 5,
+    title: "Table Lamp",
+    price: "$24.99",
+    discount: "-50%",
+  },
+  {
+    path: furniture[2],
+    rating: 5,
+    title: "Beige Table Lamp",
+    price: "$24.00",
+    discount: "-50%",
+  },
+  {
+    path: furniture[3],
+    rating: 5,
+    title: "Bamboo Basket",
+    price: "$10.50",
+    discount: "-50%",
+  },
+  {
+    path: furniture[4],
+    rating: 5,
+    title: "Toaster",
+    price: "$249.25",
+    oldPrice: "$400.00",
+    discount: "-50%",
+  },
 ];
 
 const goodsInfo = [
-    { title: "Living Room", img: rooms[2], top: "7%", left: "8.6%" },
-    { title: "Bedroom", img: rooms[0] },
-    { title: "Kitchen", img: rooms[1] },
+  { title: "Living Room", img: rooms[2], top: "7%", left: "8.6%" },
+  { title: "Bedroom", img: rooms[0] },
+  { title: "Kitchen", img: rooms[1] },
 ];
 const collOffering = "Shop Now";
 
 export default function HomePage01(props) {
-    const [flyMenu, setFlyMenu] = useState(-1.2);
-    const showFlyMenu = () => {
-        setFlyMenu(0);
-    };
-    const hideFlyMenu = () => {
-        setFlyMenu(-1.2);
-    };
-    useEffect(() => {
-      document.body.style.overflow = (flyMenu === 0 ? "hidden" : "visible");
-    });
-    return (
-        <div>
-            <FlyMenu displayParam={flyMenu} hideClick={hideFlyMenu} />
-            <ShadowBlock displayParam={flyMenu}/>
-            <Offer offerText={"30% off storewide — Limited time!"} />
-            <Head
-                headStyle={{
-                    backgroundColor: "white",
-                    color: "#6c7275",
-                }}
-                showClick={showFlyMenu}
-            />
-            <div className="page">
-                <Slider />
-                <Description />
-                <Collection goods={goodsInfo} collOffer={collOffering} />
-                <NewArrivals
-                    itemList={itemInfo}
-                    wrap="no-wrap"
-                    header="New arrivals"
-                />
-                <Pros />
-                <Info2 />
-                <Articles />
-                <Newsletter background={newsletterBack} />
-            </div>
-            <Footer />
-        </div>
-    );
+  const [flyMenu, setFlyMenu] = useState(-1.2);
+  const showFlyMenu = () => {
+    setFlyMenu(0);
+  };
+  const hideFlyMenu = () => {
+    setFlyMenu(-1.2);
+  };
+  useEffect(() => {
+    document.body.style.overflow = flyMenu === 0 ? "hidden" : "visible";
+  });
+  return (
+    <div>
+      <FlyMenu displayParam={flyMenu} hideClick={hideFlyMenu} />
+      <ShadowBlock displayParam={flyMenu} />
+      <Offer offerText={"30% off storewide — Limited time!"} />
+      <Head
+        headStyle={{
+          backgroundColor: "white",
+          color: "#6c7275",
+        }}
+        showClick={showFlyMenu}
+      />
+      <div className="page">
+        <Slider />
+        <Description />
+        <Collection goods={goodsInfo} collOffer={collOffering} />
+        <NewArrivals itemList={itemInfo} wrap="no-wrap" header="New arrivals" />
+        <Pros />
+        <Info2 />
+        <Articles />
+        <Newsletter background={newsletterBack} />
+      </div>
+      <Footer />
+    </div>
+  );
 }

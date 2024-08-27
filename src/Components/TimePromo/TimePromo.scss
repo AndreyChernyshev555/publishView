@@ -1,129 +1,129 @@
 .time-promotion {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: auto;
 }
 .time-promotion_img {
-    background-image: url("../../img/hurry.svg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: right;
+  background-image: url("../../img/hurry.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: right;
 }
 .time-promotion_header {
-    color: #377dff;
-    font-family: Inter;
-    font-size: 16px;
-    font-weight: 700;
-    line-height: 16px;
+  color: #377dff;
+  font-family: Inter;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 16px;
 }
 .time-promotion_content {
-    display: flex;
-    flex-direction: column;
-    gap: 24px;
-    background-color: rgba(255, 171, 0, 0.4);
-    padding: 5% 11% 5% 5%;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  background-color: rgba(255, 171, 0, 0.4);
+  padding: 5% 11% 5% 5%;
 }
 .time-promotion_offer {
-    font-family: Poppins;
-    font-size: 40px;
-    font-weight: 500;
-    line-height: 44px;
-    letter-spacing: -0.4px;
+  font-family: Poppins;
+  font-size: 40px;
+  font-weight: 500;
+  line-height: 44px;
+  letter-spacing: -0.4px;
 }
 .time-promotion_text {
-    font-family: Inter;
-    font-size: 20px;
-    font-weight: 400;
-    line-height: 32px;
+  font-family: Inter;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 32px;
 }
 .time-promotion_timer-block {
-    display: flex;
-    flex-direction: column;
-    gap: 24px;
-    font-family: Inter;
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 26px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  font-family: Inter;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 26px;
 }
 .time-promotion_timer {
-    width: 75%;
-    display: grid;
-    grid-template-columns: repeat(4, 4em);
-    grid-template-rows: 2fr 1fr;
-    grid-gap: 5%;
+  width: 75%;
+  display: grid;
+  grid-template-columns: repeat(4, 4em);
+  grid-template-rows: 2fr 1fr;
+  grid-gap: 5%;
 }
 .time-promotion_number-text {
-    text-align: center;
-    font-family: Inter;
-    font-size: 12px;
-    font-weight: 400;
-    line-height: 20px;
+  text-align: center;
+  font-family: Inter;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 20px;
 }
 .time-promotion_number {
-    background-color: white;
+  background-color: white;
+  font-family: Poppins;
+  font-size: 34px;
+  font-weight: 500;
+  line-height: 38px;
+  letter-spacing: -0.6px;
+  padding: 20% 0% 20% 0%;
+  text-align: center;
+}
+.time-promotion_button {
+  background-color: black;
+  color: white;
+  font-family: Inter;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 28px;
+  letter-spacing: -0.4px;
+  text-align: center;
+  padding: 1% 6.67% 1% 6.67%;
+  border-radius: 8px;
+  width: 20%;
+}
+
+@media screen and (max-width: 480px) {
+  .time-promotion {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  .time-promotion_img {
+    height: 348px;
+  }
+  .time-promotion_content {
+    padding: 5%;
+  }
+  .time-promotion_offer {
     font-family: Poppins;
     font-size: 34px;
     font-weight: 500;
     line-height: 38px;
     letter-spacing: -0.6px;
-    padding: 20% 0% 20% 0%;
-    text-align: center;
-}
-.time-promotion_button {
-    background-color: black;
-    color: white;
+  }
+  .time-promotion_text {
+    font-family: Inter;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 22px;
+  }
+  .time-promotion_timer-block {
     font-family: Inter;
     font-size: 16px;
+    font-weight: 400;
+    line-height: 26px;
+  }
+  .time-promotion_timer {
+    grid-template-columns: repeat(4, 60px);
+    font-family: Poppins;
+    font-size: 34px;
     font-weight: 500;
-    line-height: 28px;
-    letter-spacing: -0.4px;
+    line-height: 38px;
+    letter-spacing: -0.6px;
     text-align: center;
-    padding: 1% 6.67% 1% 6.67%;
-    border-radius: 8px;
-    width: 20%;
-}
-
-@media screen and (max-width: 480px) {
-    .time-promotion {
-        display: flex;
-        flex-direction: column-reverse;
-    }
-    .time-promotion_img {
-        height: 348px;
-    }
-    .time-promotion_content {
-        padding: 5%;
-    }
-    .time-promotion_offer {
-        font-family: Poppins;
-        font-size: 34px;
-        font-weight: 500;
-        line-height: 38px;
-        letter-spacing: -0.6px;
-    }
-    .time-promotion_text {
-        font-family: Inter;
-        font-size: 14px;
-        font-weight: 400;
-        line-height: 22px;
-    }
-    .time-promotion_timer-block {
-        font-family: Inter;
-        font-size: 16px;
-        font-weight: 400;
-        line-height: 26px;
-    }
-    .time-promotion_timer {
-        grid-template-columns: repeat(4, 60px);
-        font-family: Poppins;
-        font-size: 34px;
-        font-weight: 500;
-        line-height: 38px;
-        letter-spacing: -0.6px;
-        text-align: center;
-    }
-    .time-promotion_button {
-        width: 35%;
-        padding: 2%;
-    }
+  }
+  .time-promotion_button {
+    width: 35%;
+    padding: 2%;
+  }
 }

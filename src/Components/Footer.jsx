@@ -1,8 +1,8 @@
 import React from "react";
 import "./Footer.scss";
-import instagramIcon from "../img/icons/instagram.svg"
-import facebookIcon from "../img/icons/facebook.svg"
-import youtubeIcon from "../img/icons/youtube.svg"
+import instagramIcon from "../img/icons/instagram.svg";
+import facebookIcon from "../img/icons/facebook.svg";
+import youtubeIcon from "../img/icons/youtube.svg";
 export default function Footer() {
   return (
     <div className="footer">

@@ -11,14 +11,13 @@ import arrRight from "../../img/icons/arrow-right.svg";
 const images = [imSlide1, imSlide2, imSlide3, imSlide4];
 
 export default function Slider() {
-  const widthProportion = window.matchMedia("screen and (max-width: 480px)")
+  const sliderWidth = window.matchMedia("screen and (max-width: 480px)").matches
+    ? "100vw"
+    : "58.3vw";
+  const sliderHeight = window.matchMedia("screen and (max-width: 480px)")
     .matches
-    ? 1920 / 1920
-    : 1120 / 1920;
-  const heightProportion = window.matchMedia("screen and (max-width: 480px)")
-    .matches
-    ? 1920 / 1920
-    : 560 / 1920;
+    ? "100vw"
+    : "29.16vw";
   const lastIndex = images.length - 1;
   const [currImg, setCurrImg] = useState(0);
   const [touchPosition, setTouchPosition] = useState(null);
@@ -61,30 +60,12 @@ export default function Slider() {
     return () => clearInterval(interval);
   }, [currImg]);
 
-  const [size, setSize] = useState({
-    width: widthProportion * window.innerWidth,
-    height: heightProportion * window.innerWidth,
-  });
-
-  useEffect(() => {
-    const resize = () => {
-      setSize({
-        width: widthProportion * window.innerWidth,
-        height: heightProportion * window.innerWidth,
-      });
-    };
-    window.addEventListener("resize", resize);
-    return () => {
-      window.removeEventListener("resize", resize);
-    };
-  }, []);
-
   const imageList = images.map((image) => (
     <div
       className="slide_carousel-imgs-item"
       style={{
         backgroundImage: `url(${image})`,
-        width: `${size.width}px`,
+        width: sliderWidth,
         backgroundSize: "cover",
         backgroundPosition: "64%",
       }}
@@ -94,24 +75,21 @@ export default function Slider() {
   return (
     <div
       className="slider"
-      style={{ width: `${size.width}px`, height: `${size.height}px` }}
+      style={{ width: sliderWidth, height: sliderHeight }}
       onTouchStart={handleTouchStart}
       onTouchMove={handleTouchMove}
     >
-      <div
-        className="slide_filter-left"
-        style={{ height: `${size.height}px` }}
-      ></div>
+      <div className="slide_filter-left" style={{ height: sliderHeight }}></div>
       <div
         className="slide_filter-right"
-        style={{ height: `${size.height}px` }}
+        style={{ height: sliderHeight }}
       ></div>
       <div
         className="slide_carousel-imgs"
         style={{
-          transform: `translateX(-${currImg * size.width}px)`,
-          width: `${size.width * 4}px`,
-          height: `${size.height}px`,
+          transform: `translateX(-${currImg * parseInt(sliderWidth)}vw)`,
+          width: `${parseInt(sliderWidth) * 4}vw`,
+          height: sliderHeight,
         }}
       >
         {imageList}

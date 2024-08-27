@@ -8,14 +8,22 @@ export default function Offer(props) {
   const handleClick = () => setIsShown(!isShown);
 
   return (
-    <div className="offer" id="offer1" style={isShown ? props.offerColors : {display: 'none'}}>
+    <div
+      className="offer"
+      id="offer1"
+      style={isShown ? props.offerColors : { display: "none" }}
+    >
       <div></div>
       <div className="offer_center">
-        <img className="offer_img" src={offerIcon} style={props.offerImg}/>
+        <img className="offer_img" src={offerIcon} style={props.offerImg} />
         <span className="offer_text">{props.offerText}</span>
-        <span className="offer_link" style={props.offerLink}>Shop now &#8594;</span>
+        <span className="offer_link" style={props.offerLink}>
+          Shop now &#8594;
+        </span>
       </div>
-      <span className="offer_close" onClick={handleClick}>×</span>
+      <span className="offer_close" onClick={handleClick}>
+        ×
+      </span>
     </div>
   );
 }

@@ -5,145 +5,147 @@ $discount-color: #38cb89;
 $blue-accent: #377dff;
 
 @mixin flex-row {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
 
 .new-arrivals {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    gap: 48px;
-    padding-top: 48px;
-    padding-left: 11.1%;
-    padding-right: 11.1%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 48px;
+  padding-top: 48px;
+  padding-left: 11.1%;
+  padding-right: 11.1%;
 }
 
 .new-arrivals_img {
-    position: relative;
-    font-family: Inter;
-    font-size: 16px;
-    font-weight: 700;
-    line-height: 16px;
+  position: relative;
+  font-family: Inter;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 16px;
 }
 
 .new-arrivals_img-info {
-    position: absolute;
-    top: 5%;
-    left: 5%;
+  position: absolute;
+  top: 5%;
+  left: 5%;
 }
 
 .new-arrivals_new {
-    text-align: center;
-    padding: 4px 14px 4px 14px;
-    margin-bottom: 4px;
-    width: 43px;
+  text-align: center;
+  padding: 4px 14px 4px 14px;
+  margin-bottom: 4px;
+  width: 43px;
 }
 
 .new-arrivals_discount {
-    background-color: $discount-color;
-    color: white;
-    border-radius: 4px;
-    padding: 4px 14px 4px 14px;
-    margin-bottom: 4px;
+  background-color: $discount-color;
+  color: white;
+  border-radius: 4px;
+  padding: 4px 14px 4px 14px;
+  margin-bottom: 4px;
 }
 
 .new-arrivals_text {
-    @include flex-row;
-    align-items: end;
-    font-weight: 500;
-    letter-spacing: -0.4;
+  @include flex-row;
+  align-items: end;
+  font-weight: 500;
+  letter-spacing: -0.4;
 }
 
 .new-arrivals_text-item1 {
-    width: 20%;
-    font-family: Poppins;
-    font-size: 40px;
-    line-height: 44px;
+  width: 20%;
+  font-family: Poppins;
+  font-size: 40px;
+  line-height: 44px;
 }
 
 .new-arrivals_add-button {
-    opacity: 0;
-    position: absolute;
-    bottom: 5%;
-    left: 5%;
-    font-weight: 500;
-    text-align: center;
-    align-content: center;
-    border-radius: 10px;
-    background-color: #141718;
-    color: $info-background;
-    width: 90%;
-    height: 12.5%;
-    transition: opacity 200ms, background-color 600ms;
-    &:hover {
-        background-color: #3b3f41;
-    }
-    &:active {
-        background-color: #acb6bb;
-    }
+  opacity: 0;
+  position: absolute;
+  bottom: 5%;
+  left: 5%;
+  font-weight: 500;
+  text-align: center;
+  align-content: center;
+  border-radius: 10px;
+  background-color: #141718;
+  color: $info-background;
+  width: 90%;
+  height: 12.5%;
+  transition:
+    opacity 200ms,
+    background-color 600ms;
+  &:hover {
+    background-color: #3b3f41;
+  }
+  &:active {
+    background-color: #acb6bb;
+  }
 }
 
 .new-arrivals_text-item2 {
-    font-family: Inter;
-    font-size: 16px;
-    line-height: 28px;
-    &:link {
-        color: black;
-    }
-    &:visited {
-        color: $secondary-color;
-    }
+  font-family: Inter;
+  font-size: 16px;
+  line-height: 28px;
+  &:link {
+    color: black;
+  }
+  &:visited {
+    color: $secondary-color;
+  }
 }
 
 .new-arrivals_goods {
-    display: flex;
-    flex-direction: row;
-    gap: 2.6%;
-    overflow-x: scroll;
-    padding-bottom: 48px;
+  display: flex;
+  flex-direction: row;
+  gap: 2.6%;
+  overflow-x: scroll;
+  padding-bottom: 48px;
 }
 
 .new-arrivals_goods-item {
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-    width: 23%;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 23%;
 }
 
 .new-arrivals_description {
-    display: flex;
-    flex-direction: column;
-    gap: 4px;
-    font-family: Inter;
-    font-weight: 600;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  font-family: Inter;
+  font-weight: 600;
 }
 
 .new-arrivals_title {
-    font-size: 16px;
-    line-height: 26px;
+  font-size: 16px;
+  line-height: 26px;
 }
 
 .new-arrivals_price {
-    display: flex;
-    flex-direction: row;
-    gap: 10px;
-    font-size: 14px;
-    line-height: 22px;
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  font-size: 14px;
+  line-height: 22px;
 }
 
 .new-arrivals_price-old {
-    color: $secondary-color;
-    font-weight: 400;
-    text-decoration: line-through;
+  color: $secondary-color;
+  font-weight: 400;
+  text-decoration: line-through;
 }
 
 @media screen and (max-width: 480px) {
-    .new-arrivals_goods {
-        gap: 5%;
-    }
-    .new-arrivals_goods-item {
-        width: fit-content;
-    }
+  .new-arrivals_goods {
+    gap: 5%;
+  }
+  .new-arrivals_goods-item {
+    width: fit-content;
+  }
 }

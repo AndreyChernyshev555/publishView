@@ -1,31 +1,14 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import "./Collection.scss";
 
 export default function Collection(props) {
-  const heightProportionMain = window.matchMedia(
-    "screen and (max-width: 480px)"
-  ).matches
-    ? 2
-    : 650 / 1920;
-
-  const [sizeMain, setSizeMain] = useState(
-    heightProportionMain * window.innerWidth
-  );
-
-  useEffect(() => {
-    const resize = () => {
-      setSizeMain(heightProportionMain * window.innerWidth);
-    };
-    window.addEventListener("resize", resize);
-    return () => {
-      window.removeEventListener("resize", resize);
-    };
-  }, [heightProportionMain]);
+  const collectionHeight = window.matchMedia("screen and (max-width: 480px)")
+    .matches
+    ? "200vw"
+    : "33.9vw";
 
   return (
-    <div className="collection"
-      style={{height: sizeMain,}}
-    >
+    <div className="collection" style={{ height: collectionHeight }}>
       <div
         className="collection_main"
         style={{
